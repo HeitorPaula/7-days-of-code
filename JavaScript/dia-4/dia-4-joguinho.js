@@ -1,24 +1,48 @@
 console.log('Ola pessoas!');
 console.log('4º Dia de #7DaysOfCode!');
 
+// Sem número randômico
+
+/*
 const numero = 4;
 
-const escolha = prompt('Tente acertar o número escolhido! Escolha um número de 1 a 10!');
+const escolha = "";
 
-const chances = 3;
+const acertou = false;
 
-function menosChances(chances) {
-    return chances =- 1
+for (let contador = 0; contador < 3; contador++) {
+    chute = prompt("Tente advinhar o número de 0 a 10:");
+    if (chute == numero) {
+        alert(`Parabéns, você acertou! O número era ${numero}.`);
+        acertou = true;
+        break;
+    }
+    alert("Errado!");
 }
 
-if (escolha == numero) {
-    alert('Você acertou! Parabéns!')
-} else {
-    while (chances != 0) {
-        menosChances()
-        alert(`Você errou! Tem mais ${chances} chances!`);
-        escolha = prompt('Tente acertar o número escolhido! Escolha um número de 1 a 10!');
-        
-    } 
+if (!acertou) {
+    alert(`Infelizmente, você não acertou. O número era ${numero}!`);
+}
+*/
+
+// Com número randômico
+
+const numero = Math.floor(Math.random() * (10 - 0 + 1) + 0);
+
+const escolha = "";
+
+const acertou = false;
+
+for (let contador = 0; contador < 3; contador++) {
+    chute = prompt("Tente advinhar o número de 0 a 10:");
+    if (chute == numero) {
+        alert(`Parabéns, você acertou! O número era ${numero}.`);
+        acertou = true;
+        break;
+    }
+    alert("Errado!");
 }
 
+if (!acertou) {
+    alert(`Infelizmente, você não acertou. O número era ${numero}!`);
+}
